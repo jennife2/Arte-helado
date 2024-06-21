@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte Helado</title>
+    <!--LINKS PARA CONTACTENOS-->
+    <link rel="stylesheet" href="contactenosstylee.css">
+    <script src="">"anonymous"</script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Estilos CSS personalizados -->
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(255, 212, 249);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(255, 212, 249);
+            color: rgb(247, 242, 246);
+            padding: 10px;
+        }
+
+        .nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .nav ul li {
+            margin: 0 10px;
+            padding: 0 10px;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: #161616;
+            font-size: 15px;
+            transition: all ease .4s;
+        }
+
+        .nav ul li a:hover {
+            color: #ffffff;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            /* Alineación vertical al inicio */
+            flex-wrap: wrap;
+            /* Envolver elementos cuando no quepan en una línea */
+            width: 80%;
+            max-width: 1200px;
+            /* Ancho máximo para controlar el tamaño */
+            margin: 50px auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="nav">
+        <img src="imagenes/WhatsApp_Image_2024-06-19_at_01.15.30-removebg-preview.png" alt="" height="90px"
+            width="90px">
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="productos.html">PRODUCTOS</a></li>
+                <li><a href="promociones.html">PROMOCIONES</a></li>
+                <li><a href="contactenos.html">CONTACTENOS</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--EMPIEZA FORMATO DE CONCTACTENOS-->
+    <div class="container">
+        <div class="box-info">
+            <h1>CONTACTENOS</h1>
+            <div class="data">
+                <p> <i class="fa-solid fa-mobile"></i>+503 7688 0698</p>
+                <p><i class="fa fa-envelope"></i>infoartehelado@gmail.com</p>
+                <p> <i class="fas fa-map-marker-alt"></i>
+                </p>
+                <h1>Ubicaciones</h1>
+                <H3>SAN SALVADOR</H3>
+                Col. Centroamérica, Avenida Don Bosco 111, San Salvador
+                <h3>METAPAN</h3>
+                CA 12N, Metapan
+                </i>
+                </p>
+            </div>
+            <div class="links">
+                <a href="https://www.facebook.com/people/Arte-Helado/100063496725803/?mibextid=LQQJ4d"> <i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/arte.helado?igsh=MWNwejlzeDN6MmVtMw=="> <i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <form>
+            <div class="input-box">
+                <input type="text" required placeholder="Nombre y apellido"> <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="email" required placeholder="Correo electrónico"> <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="text" required placeholder="Asunto"> <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+            <div class="input-box">
+                <textarea cols="30" rows="10" placeholder="Escribe tu mensaje aquí"></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

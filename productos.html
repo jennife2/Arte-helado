@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arte Helado</title>
+  <style>
+    body {
+      background-color: rgb(255, 212, 249);
+      font-family: "poppins";
+      margin: 0;
+      padding: 0;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(255, 212, 249);
+      color: rgb(247, 242, 246);
+      padding: 0 1rem; 
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      position: relative; 
+      z-index: 1000; 
+    }
+    .nav ul {
+      display: flex;
+      list-style-type: none;
+    }
+    .nav ul li {
+      margin: 0 10px;
+      padding: 0 10px;
+    }
+    .nav ul li a {
+      text-decoration: none;
+      color: #161616;
+      font-size: 15px;
+      transition: all ease .4s;
+      align-items: center;
+    }
+    .nav ul li a:hover {
+      color: #ffffff;
+    }
+    .container {
+      max-width: 800px;
+      margin: 120px auto 20px; 
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative; 
+      z-index: 1; 
+    }
+    h1 {
+      text-align: center;
+      color: #333333;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      padding: 15px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .card h3 {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #333333;
+    }
+    .card p {
+      margin: 8px 0;
+      font-size: 16px;
+      color: #666666;
+    }
+    .add-to-cart {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .add-to-cart:hover {
+      background-color: #45a049;
+    }
+    .summary {
+      position: absolute; 
+      top: 90px; 
+      right: 20px; 
+      width: 250px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 999; 
+    }
+    .summary h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .summary ul {
+      list-style: none;
+      padding: 0;
+    }
+    .summary ul li {
+      margin-bottom: 10px;
+    }
+    .summary .total {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <img src="imagenes/WhatsApp_Image_2024-06-19_at_01.15.30-removebg-preview.png" alt="" height="90px" width="90px">
+    <div class="nav-links">
+      <ul>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="productos.html">PRODUCTOS</a></li>
+        <li><a href="promociones.html">PROMOCIONES</a></li>
+        <li><a href="contactenos.html">CONTACTENOS</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <h1>Productos Disponibles</h1>
+    <div class="cards">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="imagenes/Super familiar.jpeg" alt="Producto 1">
+        <h3>COMBO SUPER FAMILIAR</h3>
+        <p>Precio: $10.55</p>
+        <label for="sabor-super-familiar">Seleccione sabor:</label>
+        <select id="sabor-super-familiar" class="sabor">
+          <option value="mora">Mora</option>
+          <option value="leche">Leche</option>
+          <option value="mango">Mango</option>
+          <option value="nance">Nance</option>
+          <option value="galletas">Galletas</option>
+        </select>
+        <button class="add-to-cart" data-product="COMBO SUPER FAMILIAR" data-price="10.55">Agregar al Carrito</button>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="imagenes/combo familiar..jpeg" alt="Producto 2">
+        <h3>COMBO FAMILIAR</h3>
+        <p>Precio: $5.55</p>
+        <label for="sabor-familiar">Seleccione sabor:</label>
+        <select id="sabor-familiar" class="sabor">
+          <option value="mora">Mora</option>
+          <option value="leche">Leche</option>
+          <option value="mango">Mango</option>
+          <option value="nance">Nance</option>
+          <option value="galletas">Galletas</option>
+        </select>
+        <button class="add-to-cart" data-product="COMBO FAMILIAR" data-price="5.55">Agregar al Carrito</button>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="imagenes/personal.jpeg" alt="Producto 3">
+        <h3>COMBO PERSONAL</h3>
+        <p>Precio: $2.99</p>
+        <label for="sabor-personal">Seleccione sabor:</label>
+        <select id="sabor-personal" class="sabor">
+          <option value="mora">Mora</option>
+          <option value="leche">Leche</option>
+          <option value="mango">Mango</option>
+          <option value="nance">Nance</option>
+          <option value="galletas">Galletas</option>
+        </select>
+        <button class="add-to-cart" data-product="COMBO PERSONAL" data-price="2.99">Agregar al Carrito</button>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <img src="imagenes/Paletas.jpeg" alt="Producto 4">
+        <h3>PALETAS</h3>
+        <p>Precio: $1.00</p>
+        <label for="sabor-paletas">Seleccione sabor:</label>
+        <select id="sabor-paletas" class="sabor">
+          <option value="mora">Mora</option>
+          <option value="leche">Leche</option>
+          <option value="mango">Mango</option>
+          <option value="nance">Nance</option>
+          <option value="galletas">Galletas</option>
+        </select>
+        <button class="add-to-cart" data-product="PALETAS" data-price="1.00">Agregar al Carrito</button>
+      </div>
+
+     
+      <div class="card">
+        <img src="imagenes/KAORI.jpeg" alt="Producto 5">
+        <h3>KAORI</h3>
+        <p>Precio: $2.75</p>
+        <label for="sabor-kaori">Seleccione sabor:</label>
+        <select id="sabor-kaori" class="sabor">
+          <option value="mora">Mora</option>
+          <option value="leche">Leche</option>
+          <option value="mango">Mango</option>
+          <option value="nance">Nance</option>
+          <option value="galletas">Galletas</option>
+        </select>
+        <button class="add-to-cart" data-product="KAORI" data-price="2.75">Agregar al Carrito</button>
+      </div>
+
+      <div class="card">
+        <img src="imagenes/milkshake.jpeg" alt="Producto 6">
+        <h3>MILKSHAKE</h3>
+        <p>Precio: $2.75</p>
+        <label for="sabor-milkshake">Seleccione sabor:</label>
+        <select id="sabor-milkshake" class="sabor">
+          <option value="mora">Mora</option>
+          <option value="leche">Leche</option>
+          <option value="mango">Mango</option>
+          <option value="nance">Nance</option>
+          <option value="galletas">Galletas</option>
+        </select>
+        <button class="add-to-cart" data-product="MILKSHAKE" data-price="2.75">Agregar al Carrito</button>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="card">
+        <img src="imagenes/cafe helado.jpeg" alt="Producto 7">
+        <h3>CAFE HELADO</h3>
+        <p>Precio: $2.75</p>
+        <label for="sabor-cafe-helado">Seleccione sabor:</label>
+        <select id="sabor-cafe-helado" class="sabor">
+          <option value="mora">Mora</option>
+          <option value="leche">Leche</option>
+          <option value="mango">Mango</option>
+          <option value="nance">Nance</option>
+          <option value="galletas">Galletas</option>
+        </select>
+        <button class="add-to-cart" data-product="CAFE HELADO" data-price="2.75">Agregar al Carrito</button>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="card">
+        <img src="imagenes/barquillo.jpeg" alt="Producto 8">
+        <h3>BARQUILLO</h3>
+        <p>Precio: $1.25</p>
+        <label for="sabor-barquillo">Seleccione sabor:</label>
+        <select id="sabor-barquillo" class="sabor">
+          <option value="mora">Mora</option>
+          <option value="leche">Leche</option>
+          <option value="mango">Mango</option>
+          <option value="nance">Nance</option>
+          <option value="galletas">Galletas</option>
+        </select>
+        <button class="add-to-cart" data-product="BARQUILLO" data-price="1.25">Agregar al Carrito</button>
+      </div>
+    </div>
+  </div>
+  <div class="summary">
+    <h2>Resumen de la Compra</h2>
+    <ul id="cart-items"></ul>
+    <div class="total">Total: $<span id="total">0.00</span></div>
+  </div>
+
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let total = 0;
+      const totalElement = document.getElementById("total");
+      const cartItemsElement = document.getElementById("cart-items");
+      const buttons = document.querySelectorAll(".add-to-cart");
+
+      buttons.forEach(button => {
+        button.addEventListener("click", function () {
+          const product = this.getAttribute("data-product");
+          const price = parseFloat(this.getAttribute("data-price"));
+          const sabor = this.previousElementSibling.value;
+
+          total += price;
+          totalElement.textContent = total.toFixed(2);
+
+          const listItem = document.createElement("li");
+          listItem.textContent = `${product} - Sabor: ${sabor} - $${price.toFixed(2)}`;
+          cartItemsElement.appendChild(listItem);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

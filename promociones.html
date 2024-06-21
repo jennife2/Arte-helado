@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte Helado</title>
+    <style>
+       
+
+body {
+  background-color: rgb(255, 212, 249); 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FFB6C1; 
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    color: #FFF;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.promociones, .carrito {
+    width: 45%;
+}
+
+.promocion {
+    background-color: #FFF;
+    border: 1px solid #FFC0CB;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.promocion img {
+    max-width: 50%;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #FF69B4;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FF1493;
+}
+
+.carrito ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.carrito li {
+    background-color: #FFF;
+    border: 1px solid #FFC0CB;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.carrito p {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: right;
+}
+
+
+  .nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 212, 249);
+    color: rgb(247, 242, 246);
+    padding: 0,1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .Arte de la heladeria a{
+    color:#c42c2c ;
+    text-decoration: none;
+  }
+  .Arte span{
+    color: rgb(0, 0, 0);
+  }
+  .nav ul{
+    display: flex;
+    list-style-type: none;
+  }
+  .nav ul li{
+    margin: 0 10px;
+    padding: 0 10px;
+  }
+  .nav ul li a{
+    text-decoration: none;
+    color: #161616;
+    font-size: 15px;
+    transition: all ease .4s;
+    align-items: center;
+  }
+  .nav ul li a:hover{
+    color: #ffffff;
+  }
+  .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 100px;
+  }
+  .content{
+    width: 80rem;
+  }
+  
+  
+    body{
+      background-color: pink;
+    }
+     .bd-placeholder-img {
+       font-size: 1.125rem;
+       text-anchor: middle;
+       -webkit-user-select: none;
+       -moz-user-select: none;
+       -ms-user-select: none;
+       user-select: none;
+     }
+ 
+     @media (min-width: 768px) {
+       .bd-placeholder-img-lg {
+         font-size: 3.5rem;
+       }
+     }
+     select {
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #FFC0CB;
+}
+
+button {
+    margin-top: 10px;
+}
+    </style>
+</head>
+<body>
+    <body style="background-color:rgb(255, 212, 249) ;">
+        <div class="nav">
+         <img src="imagenes/WhatsApp_Image_2024-06-19_at_01.15.30-removebg-preview.png" aling="center" alt="" height="90px" width="90px" 
+         length="50px" >
+         <div class="">
+          
+         </div>
+         <div class="nav-links">
+           <ul>
+             <li><a href="index.html">INICIO</a></li>
+                      <li><a href="productos.html">PRODUCTOS</a></li>
+                     <li><a href="promociones.html">PROMOCIONES</a></li>
+                     <li><a href="contactenos.html">CONTACTENOS</a></li>
+           </ul>
+         </div>
+        </div>
+        <header>
+          <h1>Arte Helado</h1>
+      </header>
+      <main>
+          <section class="promociones">
+              <h2>Promociones</h2>
+              <div class="promocion" id="promo1">
+                  <img src="imagenes/super promocion y paleta.jpeg" alt="Promoción 1">
+                  <p>Super promocion 1 combo familiar y 6 Paletas</p>
+                  <select id="sabor1">
+                      <option value="Mango">Mango</option>
+                      <option value="Mora">Mora</option>
+                      <option value="Leche">Leche</option>
+                      <option value="Nance">Nance</option>
+                      <option value="Galleta">Galleta</option>
+                  </select>
+                  <button onclick="agregarAlCarrito('Promoción 1', 11.95, 'sabor1')">Agregar al carrito</button>
+              </div>
+              <div class="promocion" id="promo2">
+                  <img src="imagenes/promocion 2 pack.jpeg" alt="Promoción 2">
+                  <p> Promocion 2 pack combo familiar</p>
+                  <select id="sabor2">
+                      <option value="Mango">Mango</option>
+                      <option value="Mora">Mora</option>
+                      <option value="Leche">Leche</option>
+                      <option value="Nance">Nance</option>
+                      <option value="Galleta">Galleta</option>
+                  </select>
+                  <button onclick="agregarAlCarrito('Promoción 2', 10.55, 'sabor2')">Agregar al carrito</button>
+              </div>
+              <div class="promocion" id="promo2">
+                <img src="imagenes/promocion 3 pack.jpeg" alt="Promoción 3">
+                <p>Promocion 3 pack personal</p>
+                <select id="sabor2">
+                    <option value="Mango">Mango</option>
+                    <option value="Mora">Mora</option>
+                    <option value="Leche">Leche</option>
+                    <option value="Nance">Nance</option>
+                    <option value="Galleta">Galleta</option>
+                </select>
+                <button onclick="agregarAlCarrito('Promoción 3', 8.45, 'sabor2')">Agregar al carrito</button>
+            </div>
+            <div class="promocion" id="promo4">
+              <img src="imagenes/promocion paleta.jpeg" alt="Promoción 4">
+              <p>Promocion 6 palectas</p>
+              <button onclick="agregarAlCarrito('Promoción 4', 5.00, 'sabor2')">Agregar al carrito</button>
+            </div>
+            
+              <!-- Agrega más promociones según sea necesario -->
+          </section>
+          <aside class="carrito">
+              <h2>Carrito de Compras</h2>
+              <ul id="lista-carrito">
+                  <!-- Los artículos del carrito aparecerán aquí -->
+              </ul>
+              <p>Total: $<span id="total">0.00</span></p>
+          </aside>
+      </main>
+      <script src="script1.js"></script>
+  </body>
+  </html>
